@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Time | Global Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">🌍 WorldTime</a>
+        <span class="live-status">
+            <span class="status-dot"></span> LIVE CLOCKS
+        </span>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="eyebrow">YOUR WINDOW TO THE WORLD</p>
+            <h1>Time around the <span>world.</span></h1>
+            <p class="subtitle">
+                Every city, every time zone, all in one place.
+            </p>
+
+            <div class="main-clock">
+                <p>Your local time</p>
+                <h2 id="local-time">00:00:00</h2>
+                <p id="local-date">Loading date...</p>
+            </div>
+        </section>
+
+        <section class="world-section">
+            <div class="section-heading">
+                <div>
+                    <h2>World clocks</h2>
+                    <p>Stay connected across time zones.</p>
+                </div>
+                <span id="city-count">0 CITIES</span>
+            </div>
+
+            <div class="add-city">
+                <select id="city-select" aria-label="Choose a city">
+                    <option value="">Choose a city...</option>
+                    <option value="Africa/Johannesburg">Durban / Johannesburg</option>
+                    <option value="Europe/London">London</option>
+                    <option value="America/New_York">New York</option>
+                    <option value="America/Los_Angeles">Los Angeles</option>
+                    <option value="Asia/Tokyo">Tokyo</option>
+                    <option value="Asia/Dubai">Dubai</option>
+                    <option value="Asia/Kolkata">Mumbai</option>
+                    <option value="Asia/Shanghai">Shanghai</option>
+                    <option value="Australia/Sydney">Sydney</option>
+                    <option value="Europe/Paris">Paris</option>
+                    <option value="America/Sao_Paulo">São Paulo</option>
+                    <option value="Pacific/Auckland">Auckland</option>
+                    <option value="Africa/Cairo">Cairo</option>
+                    <option value="Asia/Singapore">Singapore</option>
+                </select>
+
+                <button id="add-city-btn" type="button">+ Add City</button>
+            </div>
+
+            <p id="message" role="status" aria-live="polite"></p>
+
+            <div id="clock-container" class="clock-grid"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>🌍 WorldTime — Connecting the world, one second at a time.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

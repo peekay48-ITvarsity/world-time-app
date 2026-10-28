@@ -1,0 +1,337 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --background: #080d1b;
+    --card: #111a2d;
+    --border: #25324a;
+    --text: #f4f7ff;
+    --muted: #9ba9c1;
+    --accent: #54e5c0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+.navbar {
+    height: 76px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    background: #0b1222;
+}
+
+.logo {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.live-status {
+    color: var(--accent);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.status-dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 0 55px;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 58px);
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.main-clock {
+    width: min(430px, 100%);
+    margin: 38px auto 0;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: linear-gradient(135deg, #121e34, #0d1729);
+}
+
+.main-clock p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.main-clock h2 {
+    font-size: clamp(36px, 7vw, 53px);
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin: 12px 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.world-section {
+    padding-bottom: 65px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+#city-count {
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.add-city {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+select {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    font: inherit;
+    outline: none;
+}
+
+select:focus {
+    border-color: var(--accent);
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 0 22px;
+    background: var(--accent);
+    color: #07151a;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+button:focus-visible,
+.remove-btn:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+#message {
+    min-height: 28px;
+    padding: 5px 0;
+    font-size: 12px;
+    color: var(--accent);
+}
+
+.clock-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.clock-card {
+    position: relative;
+    padding: 23px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--card);
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.clock-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.city-name {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.city-zone {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+.day-badge {
+    color: var(--accent);
+    background: #18352f;
+    border-radius: 5px;
+    padding: 5px 7px;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.clock-time {
+    font-size: clamp(24px, 3vw, 34px);
+    font-weight: 700;
+    letter-spacing: -1px;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 10px;
+}
+
+.clock-date {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 22px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.day-period {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.remove-btn {
+    color: #ff8e9c;
+    background: transparent;
+    padding: 5px 7px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.remove-btn:hover {
+    background: #35202d;
+    transform: none;
+}
+
+.empty-message {
+    grid-column: 1 / -1;
+    padding: 40px;
+    text-align: center;
+    color: var(--muted);
+    border: 1px dashed var(--border);
+    border-radius: 16px;
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--muted);
+    padding: 25px 15px;
+    font-size: 12px;
+}
+
+@media (max-width: 850px) {
+    .clock-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .navbar {
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero {
+        padding-top: 45px;
+    }
+
+    .clock-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .add-city {
+        flex-direction: column;
+    }
+
+    .add-city button {
+        padding: 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 21px;
+    }
+
+    .clock-card {
+        padding: 20px;
+    }
+}
